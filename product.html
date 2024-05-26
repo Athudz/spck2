@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="manager.css">
+    <link rel="stylesheet" href="product.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Product</title>
  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,15 +18,10 @@
     <div class="navbar">
         <div class="nav-main">
             <div class="nav-box" style="padding:30px;" >
-                <a id="userNotlogin" style="display: none;" href="signin.html"> <i class="fa-solid fa-user"
-                    style="margin-right:5px ;"></i>
-                  Đăng Nhập
-                </a>
-                <div class="logout">
-                  <button id="logout">Logout</button>
-              </div>
-              </div>
-                
+              <a id="userNotlogin" style="display: none;" href="signin.html"> <i class="fa-solid fa-user"
+                style="margin-right:5px ;"></i>
+              Đăng Nhập
+            </a></div>
             <div class="nav-box">
                 <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt="">
             </div>
@@ -57,53 +52,49 @@
     <!-- navbar -->
 <!-- content -->
 <div class="container">
-         
-    <div class="form-container">
-        <div class="form-title">
-            <h1><b></b>THÊM SẢN PHẨM</h1>
-        </div>
-        <div class="form-info">
-            <form action="" id="product-form" >
-                <label for="fname">Tên sán phẩm:</label><br>
-                <input id="name-product" type="text" name="fname" value=""><br>
-                <label for="lname">Nội dung :</label><br>
-                <input id="content-product" type="text" name="lname" value=""><br><br>
-                <label for="lname">Giá tiền :</label><br>
-                <input id="price-product" type="text" name="lname" value=""><br><br>
-                <label for="lname">Ảnh :</label><br>
-                <input id="img-product" type="text" name="lname" value=""><br><br>
-                <button type="submit" id="add-product">Add</button>
-            </form>
+    <div id="box-render">
+        <div class="product">
+            <div class="product-img">
+                <img src="${item.img}" alt="">
+            </div>
+            <div class="product-inf">
+                <h3 style="font-size: 30px;">${item.name}</h3><br>
+                <p style="font-size: 18px;">ID: ${item.id}</p><br>
+                <h6 style="font-size: 22px;">Product Description</h6><br>
+                <p style="font-size: 16px;color: #949393;">${item.content}</p><br>
+                <h4 style="font-size: 35px;">$${item.price}</h4><br>
+                
+                    <div class="add-qtt"><div class="value-button decrease_" id="" value="Decrease Value">-</div>
+             <input type="number" name="qty" id="number" value="1" />
+             <div class="value-button increase_" id="" value="Increase Value">+</div></div>
+             <button class="atc-button">Add To Cart</button>
+                 
+            </div>
 
         </div>
-    </div>
-    
-    <div class="box-product">
-        <h1>A Fancy Table</h1>
-        <table id="render-product" >
-            <!-- <tr>
-                <th>Ten</th>
-                <th>Giá</th>
-                <th>Anh</th>
-                <th>Edit</th>
-            </tr> -->
-            <!-- <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td><img src="https://fakeimg.pl/250x100/"></td>
-                <td>
-                    <button>Edit</button>
-                    <button>Delete</button>
-                </td>
-            </tr> -->
-        </table>
+</div>
+   
+    <h2 style="font-size: 30px; margin: 30px;" >You might like</h2>
+    <div class="yml">
+        <div class="card">
+            <div class="card-img">
+                <img src="img/Aerial/Shriller.webp" alt="">
+            </div>
+            <div class="card-content">
+                <h3 style="font-size: 20px; margin-bottom: 12px;">Shriller</h3>
+                <p style="font-size: 14px; color: #afadad;margin-bottom: 12px;">Highflying whistling comets with crackling tails then silver crackling comet with red or green bursts! Awesome show!</p>
+                <p style="font-size: 20px; margin-bottom: 12px;">$19.99</p>
+               
+            </div>
+            <div class="card-btn"><button class="atc-btn">Add To Cart</button></div>
+            
+        </div>
     </div>
 </div>
+
 <!-- content -->
-
-
-     <!-- footer -->
-     <div class="footer-container"> <footer class="footer">
+       <!-- footer -->
+       <div class="footer-container"> <footer class="footer">
         <div class="footer__addr">
           <h1 class="footer__logo">
             <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt="" style="width: 300px; height: 130px;">
@@ -182,5 +173,5 @@
     <!-- footer -->
 </body>
 <script src="config.js"></script>
-<script type="module" src="manager.js"></script>
+<script type="module" src="product.js"></script>
 </html>

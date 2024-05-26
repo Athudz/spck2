@@ -4,17 +4,29 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import {
   getAuth,
   signInWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  onAuthStateChanged 
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+   window.location.href = "index.html";
+  } 
+});
 
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+document.getElementById("form-login").addEventListener("submit", function (e) {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   console.log(email, password);
+
+  if (email === "" || password === "") {
+    alert("Please fill all the fields");
+    return;
+  }
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {

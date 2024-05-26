@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="signup.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,10 @@
     <div class="navbar">
         <div class="nav-main">
             <div class="nav-box" style="padding:30px;" >
-                <i class="fa-solid fa-user"  style="margin-right:5px ;"></i>
-                Tài khoản</div>
+              <a id="userNotlogin" style="display: none;" href="signin.html"> <i class="fa-solid fa-user"
+                style="margin-right:5px ;"></i>
+              Đăng Nhập
+            </a></div>
             <div class="nav-box">
                 <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt="">
             </div>
@@ -30,7 +32,8 @@
         </div>
         <div class="nav-content">
             <div class="nav-scontent">  
-            <div class="nav-ele">HOME</div>
+              <a href="index.html"><div class="nav-ele">HOME</div></a>
+
             <div class="nav-ele">SHOP</div>
             <div class="nav-ele">DỊCH VỤ</div>
             <div class="nav-ele">NGHỆ SĨ</div>
@@ -55,15 +58,15 @@
         <h1><b></b>TẠO TÀI KHOẢN</h1>
     </div>
     <div class="form-login">
-        <form action="" id="form" >
+        <form action="" id="form-register" >
             <label for="">Họ Tên</label><br>
-            <input type="text" placeholder="Họ và Tên" name="name" class="name-input input" required><br>
+            <input id="username" type="text" placeholder="Họ và Tên" name="name" class="name-input input" required><br>
             <label for="">Emai</label><br>
-            <input type="email" placeholder="Email address" name="email" class="email-input input" required><br>
+            <input id="email" type="email" placeholder="Email address" name="email" class="email-input input" required><br>
             <label for="">Password</label><br>
-            <input type="password" placeholder="Password" name="password" class="password-input input"required><br>
+            <input id="password" type="password" placeholder="Password" name="password" class="password-input input"required><br>
                 
-            <button type="submit" class="submit-btn">Log in</button>
+            <button type="submit" class="submit-btn">Register</button>
         </form>
         
         <p>*You Have An Account? <a href="signin.html">Login</a></li></p>
