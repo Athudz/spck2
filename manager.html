@@ -1,93 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="manager.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
- 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="manager.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
-    <!-- navbar -->
-    <div class="navbar">
-        <div class="nav-main">
-            <div class="nav-box" style="padding:30px;" >
-                <a id="userNotlogin" style="display: none;" href="signin.html"> <i class="fa-solid fa-user"
-                    style="margin-right:5px ;"></i>
-                  Đăng Nhập
-                </a>
-                <div class="logout">
-                  <button id="logout">Logout</button>
-              </div>
-              </div>
-                
-            <div class="nav-box">
-                <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt="">
-            </div>
-            <div class="nav-box" style="padding:30px;">
-                <i class="fa-solid fa-cart-shopping" style="margin-right:5px ;"></i>
-                Giỏ Hàng
-            </div>
-        </div>
-        <div class="nav-content">
-            <div class="nav-scontent">  
-              <a href="index.html"><div class="nav-ele">HOME</div></a>
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="nav-main">
+      <div class="nav-box" style="padding:30px;">
+        <a id="userNotlogin" style="display: none;" href="signin.html"> <i class="fa-solid fa-user"
+            style="margin-right:5px ;"></i>
+          Đăng Nhập
+        </a>
+        <div id="userLogin" class="dropdown" style="align-items: center;">
+          <img style="width: 30px; height: 30px;"
+            src="https://st4.depositphotos.com/14903220/22197/v/450/depositphotos_221970610-stock-illustration-abstract-sign-avatar-icon-profile.jpg"
+            alt="">
+          <a id="username" href="userinfo.html"></a>
 
-            <div class="nav-ele">SHOP</div>
-            <div class="nav-ele">DỊCH VỤ</div>
-            <div class="nav-ele">NGHỆ SĨ</div>
-            <div class="nav-ele">BẢN TIN</div>
-        
-        </div>
-          <div class="nav-search">
-            <i class="fa-solid fa-magnifying-glass"style="margin-right:5px ;"></i>
-            <input placeholder="Tìm Kiếm" type="text" style="border: 0px; width: 150px; height: 30px;">
+          <div class="dropdown-content">
+            <a href="#" id="btn-logout">Đăng xuất</a>
+            
           </div>
-
-
-
         </div>
+      </div>
+      <div class="nav-box">
+        <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt="">
+      </div>
+      <a href="cart.html"><div class="nav-box" style="padding:30px;">
+        <i class="fa-solid fa-cart-shopping" style="margin-right:5px ;"></i>
+        Giỏ Hàng
+      </div></a>
     </div>
-    <!-- navbar -->
-<!-- content -->
-<div class="container">
-         
+    <div class="nav-content">
+      <div class="nav-scontent">
+        <a href="index.html">
+          <div class="nav-ele">HOME</div>
+        </a>
+
+        <div class="nav-ele">SHOP</div>
+        <div class="nav-ele">DỊCH VỤ</div>
+        <div class="nav-ele">NGHỆ SĨ</div>
+        <div class="nav-ele">BẢN TIN</div>
+
+      </div>
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass" style="margin-right:5px ;"></i>
+        <input placeholder="Tìm Kiếm" type="text" style="border: 0px; width: 150px; height: 30px;">
+      </div>
+
+
+
+    </div>
+  </div>
+  <!-- navbar -->
+  <!-- content -->
+  <div class="container">
+
     <div class="form-container">
-        <div class="form-title">
-            <h1><b></b>THÊM SẢN PHẨM</h1>
-        </div>
-        <div class="form-info">
-            <form action="" id="product-form" >
-                <label for="fname">Tên sán phẩm:</label><br>
-                <input id="name-product" type="text" name="fname" value=""><br>
-                <label for="lname">Nội dung :</label><br>
-                <input id="content-product" type="text" name="lname" value=""><br><br>
-                <label for="lname">Giá tiền :</label><br>
-                <input id="price-product" type="text" name="lname" value=""><br><br>
-                <label for="lname">Ảnh :</label><br>
-                <input id="img-product" type="text" name="lname" value=""><br><br>
-                <button type="submit" id="add-product">Add</button>
-            </form>
+      <div class="form-title">
+        <h1><b></b>THÊM SẢN PHẨM</h1>
+      </div>
+      <div class="form-info">
+        <form action="" id="product-form">
+          <label for="fname">Tên sản phẩm:</label><br>
+          <input id="name-product" type="text" name="fname" value=""><br>
+          <label for="lname">Nội dung :</label><br>
+          <input id="content-product" type="text" name="lname" value=""><br><br>
+          <label for="lname">Giá tiền :</label><br>
+          <input id="price-product" type="text" name="lname" value=""><br><br>
+          <label for="lname">Ảnh :</label><br>
+          <input id="img-product" type="text" name="lname" value=""><br><br>
+          <label for="lname">Loại sản phẩm :</label><br>
+          <select  id="type-product" name="type-product" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+            <option  value="loai1">TIMES EXCLUSIVES / HÃNG ĐĨA THỜI ĐẠI PHÁT HÀNH</option>
+            <option value="loai2">NEW ARRIVALS / SẢN PHẨM MỚI</option>
+            <option value="loai3">STAFF PICKS / DĨA HÁT HÃNG CHỌN</option>
+          </select>
 
-        </div>
+          <button type="submit" id="add-product">Add</button>
+        </form>
+
+      </div>
     </div>
-    
+
     <div class="box-product">
-        <h1>A Fancy Table</h1>
-        <table id="render-product" >
-            <!-- <tr>
+      <h1>A Fancy Table</h1>
+      <table id="render-product">
+        <!-- <tr>
                 <th>Ten</th>
                 <th>Giá</th>
                 <th>Anh</th>
                 <th>Edit</th>
-            </tr> -->
-            <!-- <tr>
+            </tr> 
+        <tr>
                 <td>Alfreds Futterkiste</td>
                 <td>Maria Anders</td>
                 <td><img src="https://fakeimg.pl/250x100/"></td>
@@ -96,91 +117,131 @@
                     <button>Delete</button>
                 </td>
             </tr> -->
-        </table>
+      </table>
     </div>
-</div>
-<!-- content -->
+  </div>
+  <!-- content -->
 
 
-     <!-- footer -->
-     <div class="footer-container"> <footer class="footer">
-        <div class="footer__addr">
-          <h1 class="footer__logo">
-            <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt="" style="width: 300px; height: 130px;">
-          </h1>
-              
-          
+  <!-- footer -->
+  <div class="footer-container">
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">
+          <img src="https://theme.hstatic.net/1000304920/1001035765/14/logo.png?v=193" alt=""
+            style="width: 300px; height: 130px;">
+        </h1>
 
+
+
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">THÔNG TIN
+
+
+
+          </h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Liên hệ </a>
+            </li>
+
+            <li>
+              <a href="#">Chính sách đổi trả</a>
+            </li>
+
+            <li>
+              <a href="#">International order</a>
+            </li>
+            <li>
+              <a href="#"> FAQs</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">SẢN PHẨM
+
+
+
+          </h2>
+
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#"> Ấn bản Thời Đại</a>
+            </li>
+
+            <li>
+              <a href="#"> CD / DVD</a>
+            </li>
+
+            <li>
+              <a href="#">Đĩa than</a>
+            </li>
+
+            <li>
+              <a href="#">Băng Cassette</a>
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">TIMES RECORDS</h2>
+
+          <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+              href="#"><i class="icon ion-social-instagram"></i></a>
+        </li>
+      </ul>
+
+
+  </div>
+  </footer>
+  </div>
+
+  <!-- footer -->
+
+  <button id="myBtn">Open Modal</button>
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="form-container">
+        <div class="form-title">
+          <h1><b></b>CHỈNH SỬA SẢN PHẨM</h1>
         </div>
-        
-        <ul class="footer__nav">
-          <li class="nav__item">
-            <h2 class="nav__title">THÔNG TIN
-              
-              
-              
-             </h2>
-      
-            <ul class="nav__ul">
-              <li>
-                <a href="#">Liên hệ </a>
-              </li>
-      
-              <li>
-                <a href="#">Chính sách đổi trả</a>
-              </li>
-                  
-              <li>
-                <a href="#">International order</a>
-              </li>
-              <li>
-                <a href="#"> FAQs</a>
-              </li>
-            </ul>
-          </li>
-          
-          <li class="nav__item nav__item--extra">
-            <h2 class="nav__title">SẢN PHẨM
-             
-             
-              
-              </h2>
-            
-            <ul class="nav__ul nav__ul--extra">
-              <li>
-                <a href="#"> Ấn bản Thời Đại</a>
-              </li>
-              
-              <li>
-                <a href="#"> CD / DVD</a>
-              </li>
-              
-              <li>
-                <a href="#">Đĩa than</a>
-              </li>
-              
-              <li>
-                <a href="#">Băng Cassette</a>
-              </li>
-              
-            
-            </ul>
-          </li>
-          
-          <li class="nav__item">
-            <h2 class="nav__title">TIMES RECORDS</h2>
-            
-            <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-          </li>
-        </ul>
-        
-        
+        <div class="form-info">
+          <form action="" id="product-form">
+            <label for="fname">Tên sán phẩm:</label><br>
+            <input id="name-product-update" type="text" name="fname" value=""><br>
+            <label for="lname">Nội dung :</label><br>
+            <input id="content-product-update" type="text" name="lname" value=""><br><br>
+            <label for="lname">Giá tiền :</label><br>
+            <input id="price-product-update" type="text" name="lname" value=""><br><br>
+            <label for="lname">Ảnh :</label><br>
+            <input id="img-product-update" type="text" name="lname" value=""><br><br>
+            <select id="type-product-update" name="type-product" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+              <option value="loai1">Loai 1</option>
+              <option value="loai2">Loai 2</option>
+              <option value="loai3">Loai 3</option>
+            </select>
+            <button type="submit" id="update-product">Update</button>
+          </form>
         </div>
-      </footer>
+      </div>
     </div>
-   
-    <!-- footer -->
+
+  </div>
 </body>
 <script src="config.js"></script>
 <script type="module" src="manager.js"></script>
+<script type="module" src="header.js"></script>
+
 </html>
